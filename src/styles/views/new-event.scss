@@ -1,0 +1,80 @@
+.new-event {
+  padding: 1.8rem 1.5rem;
+  .header {
+    display: flex;
+    align-items: center;
+    .back {
+      fill: currentColor;
+      background-color: #777777;
+      border-radius: 1em;
+      color: white;
+      margin: 0 0.5em 0 0;
+    }
+  }
+
+  .step-one {
+    [for=eventName], [for=eventDescription] {
+      display: block;
+      margin: 1em 0;
+    }
+
+    #eventName, #eventDescription {
+      background-color: #f2f2f2;
+      border: 1px solid #eaeaea;
+      border-radius: 0.3125em;
+      padding: 1.5em;
+      outline: none;
+      width: 100%;
+    }
+
+    #eventDescription {
+      resize: none;
+      height: 7em;
+    }
+
+    .step-one-next {
+      position: absolute;
+      bottom: 1.8em;
+      right: 1.5em;
+    }
+  }
+
+  .step-two {
+    .optional-hint {
+      color: #777777;
+    }
+    .poster-input {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #c2c2c2;
+      height: 14.8125em;
+      background-color: #f2f2f2;
+
+      svg {
+        fill: currentColor;
+      }
+    }
+
+    .bottom-bar {
+      position: absolute;
+      bottom: 1.8em;
+      right: 1.5em;
+
+      span:not(:last-child) {
+        margin: 0 1em 0 0;
+      }
+    }
+  }
+
+  .step-one, .step-two {
+    .next-button {
+      padding: 0.625rem 1rem;
+      background-color: #3dc332;
+      color: white;
+      border: none;
+      border-radius: 0.3125em;
+      cursor: pointer;
+    }
+  }
+}
