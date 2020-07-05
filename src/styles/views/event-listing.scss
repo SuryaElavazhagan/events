@@ -1,0 +1,23 @@
+.event-listing {
+  padding: 1.8rem 1.5rem;
+  font-size: 1.0625em;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .header-title {
+      display: inline;
+      margin: 0;
+    }
+    .add-event {
+      cursor: pointer;
+      fill: currentColor;
+      color: #3dc332;
+    }
+  }
+
+  .listing {
+    margin: 1rem 0 0 0;
+  }
+}
