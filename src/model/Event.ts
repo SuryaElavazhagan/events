@@ -1,4 +1,4 @@
-import { EventJSON } from "../typings";
+import { EventJSON } from "../typings/model";
 
 export class Event {
   public name: string;
