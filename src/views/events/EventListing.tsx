@@ -24,7 +24,7 @@ export function EventListing() {
       </div>
       <main className="listing">
       {
-        events.map(event => <EventCard event={event} />)
+        events.map(event => <EventCard key={event.linkName} event={event} />)
       }
       </main>
     </section>
