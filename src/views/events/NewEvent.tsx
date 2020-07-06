@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import Toggle from 'react-toggle';
 import '../../styles/views/new-event.scss';
 
 
@@ -15,7 +16,7 @@ interface EventDetails {
 }
 
 export function NewEvent() {
-  const [currentStep, setCurrentStep] = useState(0);
+  const [currentStep, setCurrentStep] = useState(2);
   const stepHeader = [
     'Let’s start the next event',
     'Why don’t we add a face to your event?',
@@ -40,6 +41,15 @@ export function NewEvent() {
           setCurrentStep(1);
         }
         break;
+      case 1:
+        setCurrentStep(2);
+        break;
+    }
+  }
+
+  function handleBack() {
+    if (currentStep > 0) {
+      setCurrentStep(currentStep - 1);
     }
   }
 
@@ -69,9 +79,51 @@ export function NewEvent() {
               </svg>
             </div>
             <div className="bottom-bar">
-              <span>Cancel</span>
-              <span>Back</span>
+              <span>
+                <Link to="/">Cancel</Link>
+              </span>
+              <span onClick={handleBack}>Back</span>
               <button type="submit" className="next-button">Next</button>
+            </div>
+          </div>
+        );
+      case 2:
+        return (
+          <div className="step-three">
+            <div className="configuration">
+              <p>
+                Stream the event live? (enabling this will stream the event from third party services)
+              </p>
+              <Toggle
+                className="toggle"
+                icons={false}
+              />
+            </div>
+            <div className="configuration">
+              <p>
+              Allow participants to comment? (disabling this will not show the chatroom)
+              </p>
+              <Toggle
+                className="toggle"
+                icons={false}
+              />
+            </div>
+            <div className="configuration">
+              <p>
+              Schedule the event to a later date/time?
+              </p>
+              <Toggle
+                className="toggle"
+                icons={false}
+                disabled={true}
+              />
+            </div>
+            <div className="bottom-bar">
+              <span>
+                <Link to="/">Cancel</Link>
+              </span>
+              <span onClick={handleBack}>Back</span>
+              <button type="submit" className="next-button">Start</button>
             </div>
           </div>
         );
@@ -85,7 +137,7 @@ export function NewEvent() {
             <use xlinkHref="/sprite.svg#back" />
           </svg>
         </Link>
-        <h3>{ stepHeader[currentStep] }</h3>
+        <h3 className="header-title">{ stepHeader[currentStep] }</h3>
       </div>
       {
         renderCurrentStep()
