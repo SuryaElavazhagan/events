@@ -5,6 +5,8 @@
   "dependencies": {
     "@csstools/normalize.css": "10.1.0",
     "date-fns": "2.14.0",
+    "dotenv": "^8.2.0",
+    "firebase": "^7.15.5",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-router-dom": "^5.2.0",
