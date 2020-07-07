@@ -5,4 +5,14 @@
 <symbol id="back" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
 </symbol>
 <symbol id="camera" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><circle cx="12" cy="12" r="3.2"/><path d="M9 2L7.17 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2h-3.17L15 2H9zm3 15c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z"/>
+</symbol>
+<symbol id="more" viewBox="0 0 2 10.5">
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="Layer_1-2" data-name="Layer 1">
+      <path d="M1,2A1,1,0,1,0,0,1,1,1,0,0,0,1,2Z"/>
+      <path d="M1,4.25a1,1,0,1,0,1,1A1,1,0,0,0,1,4.25Z"/>
+      <path d="M1,8.5a1,1,0,1,0,1,1A1,1,0,0,0,1,8.5Z"/>
+    </g>
+  </g>
+
 </symbol></svg>
