@@ -1,0 +1,118 @@
+.new-event {
+  padding: 1.8rem 1.5rem;
+  .header {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    .header-title {
+      font-weight: 600;
+    }
+    .back {
+      fill: currentColor;
+      background-color: #777777;
+      border-radius: 1rem;
+      color: white;
+      margin: 0 0.5em 0 0;
+    }
+  }
+
+  .step-one {
+    [for=eventName], [for=eventDescription] {
+      display: block;
+      margin: 1rem 0;
+    }
+
+    #eventName, #eventDescription {
+      background-color: #f2f2f2;
+      border: 1px solid #eaeaea;
+      border-radius: 0.3125rem;
+      padding: 1rem;
+      outline: none;
+      width: 100%;
+      font-size: 1rem;
+    }
+
+    #eventDescription {
+      font-family: inherit;
+      font-size: 1rem;
+      resize: none;
+      height: 7rem;
+    }
+
+    .step-one-next {
+      position: absolute;
+      bottom: 1.8rem;
+      right: 1.5rem;
+    }
+  }
+
+  .step-two {
+    .optional-hint {
+      color: #777777;
+    }
+    .poster-input {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #c2c2c2;
+      height: 14.8125rem;
+      background-color: #f2f2f2;
+      cursor: pointer;
+
+      svg {
+        fill: currentColor;
+      }
+    }
+  }
+
+  .step-three {
+    .configuration {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      p {
+        flex: 0.8;
+      }
+    }
+    .toggle.react-toggle--checked .react-toggle-track {
+      background-color: black;
+    }
+    .toggle.react-toggle--focus .react-toggle-thumb {
+      box-shadow: none;
+    }
+    .toggle.react-toggle--checked .react-toggle-thumb {
+      border-color: transparent;
+    }
+  }
+
+  .step-two, .step-three {
+    .bottom-bar {
+      position: absolute;
+      bottom: 1.8rem;
+      right: 1.5rem;
+
+      span {
+        cursor: pointer;
+        a {
+          text-decoration: none;
+          color: inherit;
+        }
+        &:not(:last-child) {
+          margin: 0 1rem 0 0;
+        }
+      }
+    }
+  }
+
+  .step-one, .step-two, .step-three {
+    .next-button {
+      padding: 0.825rem 1.4rem;
+      font-size: 0.9rem;
+      background-color: #3dc332;
+      color: white;
+      border: none;
+      border-radius: 0.3125rem;
+      cursor: pointer;
+    }
+  }
+}
